@@ -15,9 +15,9 @@
     <main class="min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <section id="home-section" class="home min-h-screen flex justify-center items-center ">
             <div class="flex flex-col items-center  ">
-                <h1 class="anton-regular text-white text-9xl ">ALPHABET CLASH</h1>
-                <p class="poppins text-white text-xl my-14">Unleash Your Keyboard Kung Fu : Press “Play Now”</p>
-                <button onclick="play()" class="btn bg-white poppins text-2xl font-semibold">Play Now</button>
+                <h1 class="anton-regular text-white text-9xl glow ">ALPHABET  CLASH  PRO</h1>
+                <p class="poppins text-white text-2xl my-14">Unleash Your Keyboard Kung Fu : Press “Play Now”</p>
+                <button onclick="play()" class="btn bg-white poppins text-2xl font-semibold hover:bg-red-500 hover:text-white">Play Now</button>
             </div>
         </section>
         <section id="playground-section" class=" hidden">
@@ -25,7 +25,7 @@
             <div class="flex flex-col  justify-center gap-20 items-center min-h-screen">
             
                 <!-- Timer -->
-                <span class="countdown font-mono text-9xl text-white flex jus">
+                <span class="countdown font-mono text-9xl text-white counter-glow ">
                     <p id="timer" style="--value: 30"></p>
                   </span>
                 <div id="art-board" class="relative artboard artboard-horizontal phone-6 border-[15px] rounded-2xl border-[#252634] bg-[#FFFFFFB3]">
@@ -38,44 +38,44 @@
                 </div>
                 <!-- keyboard -->
                 <div>
-                    <div class="flex justify-center gap-2 mb-1 w-full">
-                        <kbd id="q" class="kbd ">Q</kbd>
-                        <kbd id="w" class="kbd ">W</kbd>
-                        <kbd id="e" class="kbd ">E</kbd>
-                        <kbd id="r" class="kbd ">R</kbd>
-                        <kbd id="t" class="kbd ">T</kbd>
-                        <kbd id="y" class="kbd ">Y</kbd>
-                        <kbd id="u" class="kbd ">U</kbd>
-                        <kbd id="i" class="kbd ">I</kbd>
-                        <kbd id="o" class="kbd ">O</kbd>
-                        <kbd id="p" class="kbd ">P</kbd>
+                    <div class="flex justify-center gap-4 mb-1 w-full">
+                        <kbd id="q" class="kbd text-xl font-extrabold w-14 h-14">Q</kbd>
+                        <kbd id="w" class="kbd text-xl font-extrabold w-14 h-14">W</kbd>
+                        <kbd id="e" class="kbd text-xl font-extrabold w-14 h-14">E</kbd>
+                        <kbd id="r" class="kbd text-xl font-extrabold w-14 h-14">R</kbd>
+                        <kbd id="t" class="kbd text-xl font-extrabold w-14 h-14">T</kbd>
+                        <kbd id="y" class="kbd text-xl font-extrabold w-14 h-14">Y</kbd>
+                        <kbd id="u" class="kbd text-xl font-extrabold w-14 h-14">U</kbd>
+                        <kbd id="i" class="kbd text-xl font-extrabold w-14 h-14">I</kbd>
+                        <kbd id="o" class="kbd text-xl font-extrabold w-14 h-14">O</kbd>
+                        <kbd id="p" class="kbd text-xl font-extrabold w-14 h-14">P</kbd>
                       </div> 
-                      <div class="flex justify-center gap-2 my-1 w-full">
-                        <kbd id="a" class="kbd ">A</kbd>
-                        <kbd id="s" class="kbd ">S</kbd>
-                        <kbd id="d" class="kbd ">D</kbd>
-                        <kbd id="f" class="kbd ">F</kbd>
-                        <kbd id="g" class="kbd ">G</kbd>
-                        <kbd id="h" class="kbd ">H</kbd>
-                        <kbd id="j" class="kbd ">J</kbd>
-                        <kbd id="k" class="kbd ">K</kbd>
-                        <kbd id="l" class="kbd ">L</kbd>
+                      <div class="flex justify-center gap-4 mt-4 my-1 w-full">
+                        <kbd id="a" class="kbd text-xl font-extrabold w-14 h-14">A</kbd>
+                        <kbd id="s" class="kbd text-xl font-extrabold w-14 h-14">S</kbd>
+                        <kbd id="d" class="kbd text-xl font-extrabold w-14 h-14">D</kbd>
+                        <kbd id="f" class="kbd text-xl font-extrabold w-14 h-14">F</kbd>
+                        <kbd id="g" class="kbd text-xl font-extrabold w-14 h-14">G</kbd>
+                        <kbd id="h" class="kbd text-xl font-extrabold w-14 h-14">H</kbd>
+                        <kbd id="j" class="kbd text-xl font-extrabold w-14 h-14">J</kbd>
+                        <kbd id="k" class="kbd text-xl font-extrabold w-14 h-14">K</kbd>
+                        <kbd id="l" class="kbd text-xl font-extrabold w-14 h-14">L</kbd>
                       </div> 
-                      <div class="flex justify-center gap-2 my-1 w-full">
-                        <kbd id="z" class="kbd ">Z</kbd>
-                        <kbd id="x" class="kbd ">X</kbd>
-                        <kbd id="c" class="kbd ">C</kbd>
-                        <kbd id="v" class="kbd ">V</kbd>
-                        <kbd id="b" class="kbd ">B</kbd>
-                        <kbd id="n" class="kbd ">N</kbd>
-                        <kbd id="m" class="kbd ">M</kbd>
-                        <kbd id="/" class="kbd ">/</kbd>
+                      <div class="flex justify-center gap-4 mt-4 my-1 w-full">
+                        <kbd id="z" class="kbd text-xl font-extrabold w-14 h-14">Z</kbd>
+                        <kbd id="x" class="kbd text-xl font-extrabold w-14 h-14">X</kbd>
+                        <kbd id="c" class="kbd text-xl font-extrabold w-14 h-14">C</kbd>
+                        <kbd id="v" class="kbd text-xl font-extrabold w-14 h-14">V</kbd>
+                        <kbd id="b" class="kbd text-xl font-extrabold w-14 h-14">B</kbd>
+                        <kbd id="n" class="kbd text-xl font-extrabold w-14 h-14">N</kbd>
+                        <kbd id="m" class="kbd text-xl font-extrabold w-14 h-14">M</kbd>
+                        <kbd id="/" class="kbd text-xl font-extrabold w-14 h-14">/</kbd>
                       </div>
                 </div>
                   <!-- keyboard end -->
 
                   <!-- button -->
-                  <div class=" flex justify-between max-w-5xl w-full">
+                  <div class=" flex justify-between max-w-5xl w-full absolute top-10 ">
                     <button class="btn text-white bg-[#9D2AE6] border-none">
                         Life
                         <img src="images/heart.svg" alt="">
@@ -94,8 +94,8 @@
             <div class="poppins text-center space-y-4 bg-[#FFFFFF33] p-10 rounded-2xl drop-shadow-2xl border-[2px] border-[#FFFFFF33]">
                 <h3 class="text-3xl font-bold text-white">Game Over</h3>
                 <h1 class="text-7xl font-extrabold text-white">Score :<span id="game-score" class="font-medium"></span></h1>
-                <button onclick="play()" class="btn text-2xl font-semibold">Play Again</button>
-                <button onclick="returnToHome()" class="btn text-2xl font-semibold">Return to Home</button>
+                <button onclick="play()" class="btn text-2xl font-semibold hover:bg-red-500 hover:text-white">Play Again</button>
+                <button onclick="returnToHome()" class="btn text-2xl font-semibold hover:bg-red-500 hover:text-white">Return to Home</button>
                 <p class="text-white text-xl font-medium">Practice will make you Pro</p>
             </div>
         </section>

@@ -9,11 +9,11 @@ function showHiddenId(elementId){
 
 function addBackgroundColor(elementId){
     const color = document.getElementById(elementId)
-    color.classList.add('bg-rose-500', 'text-white');
+    color.classList.add('bg-red-500', 'text-white');
 }
 function removeBackgroundColor(elementId){
     const color = document.getElementById(elementId)
-    color.classList.remove('bg-rose-500', 'text-white');
+    color.classList.remove('bg-red-500', 'text-white');
 }
 function setElementValueByID(elementId, value){
     const element = document.getElementById(elementId)
