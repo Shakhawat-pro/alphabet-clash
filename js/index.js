@@ -4,11 +4,36 @@
 //     const playgroundSection = document.getElementById('playground-section')
 //     playgroundSection.classList.remove('hidden')
 // }
-function playAgain(){
-    const playAgain = document.getElementById('play-again')
-    playAgain.classLists.add('hidden')
+
+const audio = new Audio()
+let isGamePlayOn = false
+
+const artBoard = document.getElementById('art-board')
+
+//timer
+const timerElement = document.getElementById('timer');
+let timeLeft = parseInt(timerElement.style.getPropertyValue('--value'));
+
+function countdown() {
+    if (timeLeft > 0) {
+        timeLeft--;
+        timerElement.style.setProperty('--value', timeLeft);
+        setTimeout(countdown, 1000); 
+    } else {
+        gameOver()
+    }
 }
+
+// function playAgain(){
+//     const playAgainElement = document.getElementById('play-again');
+//     playAgainElement.classList.add('hidden');
+// }
+
+
 function handleKeyBoardKeyUPEvent(event){
+    if(isGamePlayOn == false){
+        return
+    }
     const playerPress = event.key
     console.log('player pressed', playerPress)
     if(playerPress === 'Escape'){
@@ -18,28 +43,40 @@ function handleKeyBoardKeyUPEvent(event){
     const currentAlphabet = currentAlphabetElement.innerText
     const expectedAlphabet = currentAlphabet.toLowerCase();
     if(playerPress === expectedAlphabet){
+        //Audio
+        audio.src = "/audio/point.mp3"
+        audio.play()
         // update score
-        // 1.get the current score
         const currentScoreElement = document.getElementById('current-score')
         const currentScoreText =currentScoreElement.innerText
         const currentScore = parseInt(currentScoreText);
         const newScore = currentScore + 1 ;
         currentScoreElement.innerText = newScore;
-        // 2.
         // Start a new round
         continueGame();
         removeBackgroundColor(expectedAlphabet);
     }
     else{
+        // audio
+        audio.src = "/audio/fail.mp3"
+        audio.play()
+        
+        
+        
         const currentLifeElement = document.getElementById('current-life')
         const currentLifeText = currentLifeElement.innerText
         const currentLife = parseInt(currentLifeText)
         const newLife = currentLife - 1;
         currentLifeElement.innerText = newLife
-        console.log('nur')
-
+        //Dynamic color
+        const newLifePercentage = (newLife / 5) * 100
+        console.log(newLifePercentage);
+        artBoard.style.background =`linear-gradient(#FFFFFFB3 ${newLifePercentage}%, red)`
+        
         if(newLife === 0){
             gameOver()
+            audio.src = "/audio/game-over.mp3"
+            audio.play()
         }
 
     }
@@ -61,6 +98,9 @@ function play(){
     setElementValueByID('current-life', 5)
     setElementValueByID('current-score', 0)
     continueGame()
+    isGamePlayOn = true;
+    timeLeft = 30;
+    countdown()
 }
 
 function gameOver(){
@@ -76,6 +116,15 @@ function gameOver(){
     const randomDisplayElement = document.getElementById('random-display')
     const randomDisplayText = randomDisplayElement.innerText
     removeBackgroundColor(randomDisplayText);
+    isGamePlayOn = false
 
-
+    artBoard.style.background =`linear-gradient(#FFFFFFB3 100%, red)`
 }
+
+function returnToHome() {
+    hideElementById('playground-section');
+    hideElementById('final-section');
+    showHiddenId('home-section');
+    isGamePlayOn = false;
+}
+

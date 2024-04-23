@@ -7,7 +7,7 @@
     <!-- font family -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="shortcut icon" href="/images/play.png" type="image/x-icon">
     <!-- Daisy ui and tailwind -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -16,7 +16,7 @@
         <section id="home-section" class="home min-h-screen flex justify-center items-center ">
             <div class="flex flex-col items-center  ">
                 <h1 class="anton-regular text-white text-9xl ">ALPHABET CLASH</h1>
-                <p class="poppins text-white text-xl my-14">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <p class="poppins text-white text-xl my-14">Unleash Your Keyboard Kung Fu : Press “Play Now”</p>
                 <button onclick="play()" class="btn bg-white poppins text-2xl font-semibold">Play Now</button>
             </div>
         </section>
@@ -26,9 +26,9 @@
             
                 <!-- Timer -->
                 <span class="countdown font-mono text-9xl text-white flex jus">
-                    <p class="" style="--value:60;"></p>
+                    <p id="timer" style="--value: 30"></p>
                   </span>
-                <div class="relative artboard artboard-horizontal phone-6 border-[15px] rounded-2xl border-[#252634] bg-[#FFFFFFB3]">
+                <div id="art-board" class="relative artboard artboard-horizontal phone-6 border-[15px] rounded-2xl border-[#252634] bg-[#FFFFFFB3]">
                     <div class="flex justify-center">
                         <p class=" absolute bg-[#252634] text-white px-4 rounded-b-xl pt-0 pb-3 text-lg">Don't watch keyboard  while playing...</p>
                     </div>
@@ -95,6 +95,7 @@
                 <h3 class="text-3xl font-bold text-white">Game Over</h3>
                 <h1 class="text-7xl font-extrabold text-white">Score :<span id="game-score" class="font-medium"></span></h1>
                 <button onclick="play()" class="btn text-2xl font-semibold">Play Again</button>
+                <button onclick="returnToHome()" class="btn text-2xl font-semibold">Return to Home</button>
                 <p class="text-white text-xl font-medium">Practice will make you Pro</p>
             </div>
         </section>
